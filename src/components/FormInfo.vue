@@ -45,10 +45,15 @@
 
 <style scoped>
     .fieldset {
-        border: 1px solid #ccc;
+        color: white;
+        border: none;
         font-size: 15px;
         border-radius: 5px;
         padding: 1em;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(97,97,97,1);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(97,97,97,1);
+        box-shadow: 0px 0px 8px 0px rgba(97,97,97,1);
+        background-color: #4CAF50;
     }
 
     input, button {
@@ -70,5 +75,8 @@
     .count-btn {
         margin-left: 1.3em;
         width: 32.6%;
+        background-color: #651FFF;
+        border: none;
+        color: white;
     }
 </style>
