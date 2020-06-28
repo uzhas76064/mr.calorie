@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <hr>
+    <div class="results">
         <h3>Имеем следующее...</h3>
         <p>Ваш вес: <span>{{weight}}</span></p>
         <p>Ваш возраст: <span>{{age}}</span></p>
@@ -22,5 +21,8 @@
 </script>
 
 <style scoped>
-
+    .results {
+        margin-top: 25px;
+        border-top: 1px solid white;
+    }
 </style>
