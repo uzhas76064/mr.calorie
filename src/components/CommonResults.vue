@@ -1,10 +1,23 @@
 <template>
-    <p>Ваша норма: <span></span></p>
+    <div>
+        <hr>
+        <h3>Имеем следующее...</h3>
+        <p>Ваш вес: <span>{{weight}}</span></p>
+        <p>Ваш возраст: <span>{{age}}</span></p>
+        <p>Ваш рост: <span>{{growth}}</span></p>
+        <strong>Ваша норма калорий: <span>{{result}}</span></strong>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "CommonResults"
+        name: "CommonResults",
+        props: {
+            weight: String,
+            age: String,
+            growth: String,
+            result: Number
+        }
     }
 </script>
 

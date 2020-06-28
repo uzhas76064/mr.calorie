@@ -17,6 +17,7 @@ export default {
 
 <style>
   :root {
+    font-size: 16px;
   }
 
 #app {
