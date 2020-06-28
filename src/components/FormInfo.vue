@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="computeCalories">
-        <fieldset>
-            <legend>Информация о вас</legend>
+        <div class="fieldset">
+            <h2>Калькулятор калорий</h2>
             <div class="weight-block">
                 <p><label for="weight">Введите ваш вес</label></p>
                 <input v-model="weight" type="text" id="weight" placeholder="Вес" required>
@@ -16,7 +16,7 @@
                 <button class="count-btn">Подсчитать</button>
             </div>
 
-        </fieldset>
+        </div>
         <p>{{weight}} {{growth}} {{age}}</p>
         <p :result="result">{{result}}</p>
     </form>
@@ -44,6 +44,13 @@
 </script>
 
 <style scoped>
+    .fieldset {
+        border: 1px solid #ccc;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 1em;
+    }
+
     input, button {
         padding: 0.5em;
         border-radius: 5px;
