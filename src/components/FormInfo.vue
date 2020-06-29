@@ -15,7 +15,7 @@
                 <input v-model="age" type="text" id="age" placeholder="Возраст" required>
                 <button class="count-btn">Подсчитать</button>
             </div>
-            <CommonResults v-if="show" :growth="growth" :weight="weight" :age="age" :result="result"/>
+            <CommonResults v-if="show" :growth="growth" :weight="weight" :age="age" :idealWeight="idealWeight" :result="result"/>
         </div>
     </form>
 </template>
@@ -34,13 +34,22 @@
                weight: null,
                age: null,
                result: null,
-               show: false
+               show: false,
+               idealWeight: null
            }
        },
 
         methods: {
+            computeIdealWeight() {
+                this.idealWeight = ((this.growth - 100) * 1.15).toFixed(0);
+                return this.idealWeight;
+            },
+
             computeCalories() {
                 this.result = (10 * Number(this.weight)) + ( 5 * Number(this.age)) + (6.25 * Number(this.growth));
+
+                this.computeIdealWeight();
+
                 this.show = true;
                 return this.result;
             }
@@ -64,6 +73,7 @@
 
     .header {
         font-weight: 700;
+        color: #34495e;
     }
 
     input, button {
@@ -74,6 +84,12 @@
         outline: none;
         border: 1px solid #ccc;
         font-weight: 500;
+    }
+
+    label {
+        color: #4C4A48;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
     }
 
     input {

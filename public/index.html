@@ -14,5 +14,12 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"></script>
+    <script>bubbly({
+      blur: 3,
+      colorStart: "#4CAF50",
+      colorStop: "#81C784",
+      bubbleFunc: () => `hsla(0, 100%, 50%, ${Math.random() * 0.25})`
+    });</script>
   </body>
 </html>
